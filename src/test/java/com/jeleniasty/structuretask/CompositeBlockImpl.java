@@ -9,7 +9,7 @@ public class CompositeBlockImpl implements CompositeBlock{
         this.blocks = blocks;
     }
 
-    private List<Block> blocks;
+    private final List<Block> blocks;
     @Override
     public String getColor() {
         return this.blocks.stream().map(Block::getColor).distinct().collect(Collectors.joining(" "));
